@@ -13,6 +13,7 @@ Source0:	http://dl.sourceforge.net/ruby-pam/pam-ruby-%{version}.tar.gz
 # Source0-md5:	2b6b3442d8f47ce84a6368eb5fa7fa54
 Source1:	http://dl.sourceforge.net/ruby-pam/ruby-pam-%{rubypamversion}.tar.gz
 # Source1-md5:	a6437f94621811cda255c69d6bb3a673
+Patch0:		%{name}-libdir.patch
 URL:		http://ruby-pam.sourceforge.net/pam-ruby.html
 BuildRequires:	autoconf
 BuildRequires:	pam-devel
@@ -32,11 +33,13 @@ PAM w jêzyku Ruby.
 
 %prep
 %setup -q -n pam-ruby-%{version} -a 1
+%patch0 -p0
 
 %build
 %{__autoconf}
 %configure \
-	--with-ruby-pam=ruby-pam-%{rubypamversion}
+	--with-ruby-pam=ruby-pam-%{rubypamversion} \
+	--with-instdir=/%{_lib}/security
 
 %{__make} \
 	CC="%{__cc}" \
