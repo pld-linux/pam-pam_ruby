@@ -1,7 +1,8 @@
 %define	ruby_sitearchdir	%(ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
 %define	rubypamversion	1.5.0
+%define 	modulename pam_ruby
 Summary:	PAM module to authenticate via a ruby script
-Name:		pam-pam_ruby
+Name:		pam-%{modulename}
 Version:	1.3.1
 Release:	1
 Epoch:		1
@@ -15,14 +16,16 @@ URL:		http://ruby-pam.sourceforge.net/pam-ruby.html
 BuildRequires:	pam-devel
 BuildRequires:	ruby
 Requires:	ruby
-Requires: ruby-pam = %{rubypamversion}
+Requires:	ruby-pam = %{rubypamversion}
+Obsoletes:	%{modulename}
+Obsoletes:	pam-ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 PAM module to authenticate via a ruby script
 
 %prep
-%setup -q -a 1
+%setup -q -n pam-ruby-%{version} -a 1
 
 %build
 %{__autoconf}
