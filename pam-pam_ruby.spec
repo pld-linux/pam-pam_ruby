@@ -4,6 +4,7 @@ Summary:	PAM module to authenticate via a ruby script
 Name:		pam-pam_ruby
 Version:	1.3.1
 Release:	1
+Epoch:		1
 License:	GPL
 Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/ruby-pam/pam-ruby-%{version}.tar.gz
