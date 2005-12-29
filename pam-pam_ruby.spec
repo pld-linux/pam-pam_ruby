@@ -16,11 +16,12 @@ Patch0:		%{name}-libdir.patch
 URL:		http://ruby-pam.sourceforge.net/pam-ruby.html
 BuildRequires:	autoconf
 BuildRequires:	pam-devel
-BuildRequires:	rpmbuild(macros) >= 1.272
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
 Requires:	pam
 Requires:	ruby-PAM = %{rubypamversion}
 Obsoletes:	pam-ruby
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
