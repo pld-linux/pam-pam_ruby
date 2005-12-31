@@ -21,7 +21,7 @@ BuildRequires:	ruby-devel
 Requires:	pam
 Requires:	ruby-PAM = %{rubypamversion}
 Obsoletes:	pam-ruby
-%ruby_mod_ver_requires_eq
+%{?ruby_mod_ver_requires_eq}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
