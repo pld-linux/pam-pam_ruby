@@ -4,7 +4,7 @@ Summary:	PAM module to authenticate via a Ruby script
 Summary(pl):	Modu³ PAM do uwierzytelniania z u¿yciem skryptu w jêzyku Ruby
 Name:		pam-%{modulename}
 Version:	1.3.1
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL
 Group:		Development/Languages
