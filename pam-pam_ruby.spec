@@ -1,7 +1,7 @@
 %define		rubypamversion	1.5.2
 %define		modulename	pam_ruby
 Summary:	PAM module to authenticate via a Ruby script
-Summary(pl):	Modu³ PAM do uwierzytelniania z u¿yciem skryptu w jêzyku Ruby
+Summary(pl.UTF-8):   ModuÅ‚ PAM do uwierzytelniania z uÅ¼yciem skryptu w jÄ™zyku Ruby
 Name:		pam-%{modulename}
 Version:	1.3.1
 Release:	7
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 PAM/Ruby is a PAM module for writing the PAM authentication module
 with the Ruby.
 
-%description -l pl
-PAM/Ruby to modu³ PAM umo¿liwiaj±cy pisanie modu³u uwierzytelniaj±cego
-PAM w jêzyku Ruby.
+%description -l pl.UTF-8
+PAM/Ruby to moduÅ‚ PAM umoÅ¼liwiajÄ…cy pisanie moduÅ‚u uwierzytelniajÄ…cego
+PAM w jÄ™zyku Ruby.
 
 %prep
 %setup -q -n pam-ruby-%{version} -a 1
